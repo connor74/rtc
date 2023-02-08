@@ -1,4 +1,4 @@
-def dev_sum(m):
+def dev_sum(m: int) -> int:
     i = 1
     while True:
         num = i * m
@@ -8,4 +8,6 @@ def dev_sum(m):
             return num
         else:
             i += 1
+            
+            
 print(dev_sum(36))
