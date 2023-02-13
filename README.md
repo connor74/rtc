@@ -4,7 +4,7 @@
   https://github.com/connor74/rtc/blob/main/task_1_2.ipynb
   
   #### Задание 3 и 4: 
-  https://github.com/connor74/rtc/blob/main/task_3.sql
+  https://github.com/connor74/rtc/blob/main/task_3_4.sql
   
   #### Задание 5:
   Анализируя таблицу, столкнулся с тем, что задачи есть задачи, которые брались в рабобу после окончания рабочего дня, при этом статус не установлен как "Критический"
