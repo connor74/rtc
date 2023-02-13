@@ -12,6 +12,15 @@ query = """
 def to_excell(query: str) -> pd.DataFrame:
     con_str = "..."
     conn = psycopg2.connect(con_str)
-    data = pd.read_sql(sql=query, con=conn)
+    df = pd.read_sql(sql=query, con=conn)
     with pd.ExcelWriter("result.xlsx", engine='xlsxwriter') as writer:
-        data.to_excel(writer, sheet_name='Sheet1', index=False)
+        df.to_excel(writer, sheet_name='Sheet1', index=False)
+
+        workbook = writer.book
+        worksheet = writer.sheets['Sheet1']
+
+        dt_format = workbook.add_format({'num_format': 'yyyy-mm-dd'})
+
+        worksheet.set_column('A:A', None, dt_format)
+        
+to_excell(query)
